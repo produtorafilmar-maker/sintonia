@@ -1,0 +1,5 @@
+{
+  "name": "WebTV & Rádio App",
+  "description": "An application to stream WebTV Paracatu and Rádio Sintonia Rural, view news feeds, and access contact information. It features a modern design with distinct themes for each section.",
+  "requestFramePermissions": []
+}
