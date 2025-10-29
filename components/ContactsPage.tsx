@@ -70,7 +70,7 @@ const ContactsPage: React.FC = () => {
                 rel="noopener noreferrer"
                 className="flex items-center p-4 bg-[#1F1433] rounded-lg hover:bg-purple-900/50 transition-colors"
             >
-                <Icon className="w-7 h-7 text-purple-400" />
+                <Icon className="w-8 h-8 text-white" />
                 <p className="ml-4 font-semibold flex-grow text-gray-200">{handle}</p>
                 <span className="text-sm font-bold bg-purple-600 px-4 py-1 rounded-full text-white">Seguir</span>
             </a>

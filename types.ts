@@ -13,4 +13,5 @@ export interface ProgramItem {
   time: string;
   title: string;
   description: string;
+  isLive?: boolean;
 }

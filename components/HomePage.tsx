@@ -1,6 +1,8 @@
 
+
 import React, { useState, useEffect } from 'react';
 import { NewsItem } from '../types';
+import { PlusCircleIcon } from './Icons';
 
 const NewsModal: React.FC<{ item: NewsItem; onClose: () => void }> = ({ item, onClose }) => {
   useEffect(() => {
@@ -121,13 +123,21 @@ const HomePage: React.FC = () => {
           {news.map((item) => (
             <article 
               key={item.link} 
-              className="bg-[#1F1433]/70 rounded-lg p-4 cursor-pointer hover:bg-purple-900/50 transition-colors duration-300"
-              onClick={() => handleNewsClick(item)}
-              tabIndex={0}
-              onKeyPress={(e) => e.key === 'Enter' && handleNewsClick(item)}
-              aria-label={`Ler notícia: ${item.title}`}
+              className="bg-[#1F1433]/70 rounded-lg p-4 flex items-center justify-between"
+              aria-labelledby={`news-title-${item.link}`}
             >
-              <h2 className="font-semibold text-md leading-tight" dangerouslySetInnerHTML={{ __html: item.title }}/>
+              <h2 
+                id={`news-title-${item.link}`}
+                className="font-semibold text-md leading-tight flex-grow mr-4"
+                dangerouslySetInnerHTML={{ __html: item.title }}
+              />
+              <button 
+                onClick={() => handleNewsClick(item)}
+                className="text-purple-400 hover:text-white transition-colors duration-300 flex-shrink-0"
+                aria-label={`Ler mais sobre: ${item.title}`}
+              >
+                <PlusCircleIcon className="w-8 h-8" />
+              </button>
             </article>
           ))}
         </div>

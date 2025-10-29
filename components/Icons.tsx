@@ -91,13 +91,13 @@ export const InstagramIcon: React.FC<IconProps> = ({ className }) => (
 );
 
 export const FacebookIcon: React.FC<IconProps> = ({ className }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" className={className}>
         <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89H8.225V12h2.213V9.812c0-2.181 1.303-3.376 3.26-3.376.93 0 1.9.165 1.9.165v2.32h-1.18c-1.08 0-1.424.646-1.424 1.37v1.666h2.59l-.42 2.89h-2.17v7.008C18.343 21.128 22 16.991 22 12z"></path>
     </svg>
 );
 
 export const YoutubeIcon: React.FC<IconProps> = ({ className }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" className={className}>
         <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
     </svg>
 );
@@ -108,4 +108,54 @@ export const FeedIcon: React.FC<IconProps> = ({ className }) => (
       <path d="M4 4a16 16 0 0 1 16 16" />
       <circle cx="5" cy="19" r="1.75" fill="currentColor" stroke="none" />
     </svg>
+);
+
+export const WebTvIcon: React.FC<IconProps> = ({ className }) => (
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <defs>
+            <radialGradient id="sphereGrad" cx="0.4" cy="0.4" r="0.8">
+                <stop offset="0%" stopColor="white" />
+                <stop offset="100%" stopColor="#E0E0E0" />
+            </radialGradient>
+            <linearGradient id="playGrad" x1="0" y1="0.5" x2="1" y2="0.5">
+                <stop offset="0%" stopColor="#c026d3" />
+                <stop offset="100%" stopColor="#f97316" />
+            </linearGradient>
+            <clipPath id="playClip">
+                <path d="M9 7 L17 12 L9 17 Z" />
+            </clipPath>
+        </defs>
+        <circle cx="12" cy="12" r="11" fill="url(#sphereGrad)" stroke="#f3f4f6" strokeWidth="0.5" />
+        <g clipPath="url(#playClip)">
+            <rect x="9" y="7" width="8" height="10" fill="url(#playGrad)" />
+            <g>
+                <line x1="9" y1="8" x2="17" y2="8" stroke="rgba(0,0,0,0.15)" strokeWidth="0.8" />
+                <line x1="9" y1="9.5" x2="17" y2="9.5" stroke="rgba(0,0,0,0.15)" strokeWidth="0.8" />
+                <line x1="9" y1="11" x2="17" y2="11" stroke="rgba(0,0,0,0.15)" strokeWidth="0.8" />
+                <line x1="9" y1="12.5" x2="17" y2="12.5" stroke="rgba(0,0,0,0.15)" strokeWidth="0.8" />
+                <line x1="9" y1="14" x2="17" y2="14" stroke="rgba(0,0,0,0.15)" strokeWidth="0.8" />
+                <line x1="9" y1="15.5" x2="17" y2="15.5" stroke="rgba(0,0,0,0.15)" strokeWidth="0.8" />
+            </g>
+        </g>
+    </svg>
+);
+
+export const SintoniaRuralIcon: React.FC<IconProps> = ({ className }) => (
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <circle cx="12" cy="12" r="11.5" fill="#22C55E" stroke="#15803D" strokeWidth="1" />
+        <g fill="none" stroke="white" strokeWidth="2" strokeLinecap="round">
+            <circle cx="12" cy="16" r="1.2" fill="white" stroke="none" />
+            <path d="M9.8,13.5 a3.5 3.5 0 0 1 4.4,0" />
+            <path d="M7.5,11 a7 7 0 0 1 9,0" />
+            <path d="M5.2,8.5 a10.5 10.5 0 0 1 13.6,0" />
+        </g>
+    </svg>
+);
+
+export const PlusCircleIcon: React.FC<IconProps> = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="12" y1="8" x2="12" y2="16"></line>
+    <line x1="8" y1="12" x2="16" y2="12"></line>
+  </svg>
 );
